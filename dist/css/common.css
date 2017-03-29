@@ -1,0 +1,255 @@
+/*Code by ZHJ*/
+/*=== 隐藏bs提示 ===*/
+#__bs_notify__ {
+  display: none !important;
+}
+/*=== 全站通用样式 ===*/
+body {
+  font-family: Arial, "Microsoft YaHei";
+  background-color: #f2f2f2;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*调整PC下container宽度*/
+@media (min-width: 1143px) {
+  .container {
+    width: 1113px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0;
+  }
+}
+.img-responsive {
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnail {
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+}
+/*通用padding、margin*/
+@media (max-width: 767px) {
+  .pt30-xs {
+    padding-top: 30px !important;
+  }
+  .pt50-xs {
+    padding-top: 50px !important;
+  }
+  .pb30-xs {
+    padding-bottom: 30px !important;
+  }
+  .pb50-xs {
+    padding-bottom: 50px !important;
+  }
+  .mt30-xs {
+    margin-top: 30px !important;
+  }
+  .mt50-xs {
+    margin-top: 50px !important;
+  }
+  .mb30-xs {
+    margin-bottom: 30px !important;
+  }
+  .mb50-xs {
+    margin-bottom: 50px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .pt50-sm {
+    padding-top: 50px !important;
+  }
+  .pb50-sm {
+    padding-bottom: 50px !important;
+  }
+  .mt50-sm {
+    margin-top: 50px !important;
+  }
+  .mb50-sm {
+    margin-bottom: 50px !important;
+  }
+  .mb80-sm {
+    margin-bottom: 80px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pt50-md {
+    padding-top: 50px !important;
+  }
+  .pt80-md {
+    padding-top: 80px !important;
+  }
+  .pb50-md {
+    padding-bottom: 50px !important;
+  }
+  .pb80-md {
+    padding-bottom: 80px !important;
+  }
+  .mt50-md {
+    margin-top: 50px !important;
+  }
+  .mt80-md {
+    margin-top: 80px !important;
+  }
+  .mb50-md {
+    margin-bottom: 50px !important;
+  }
+  .mb80-md {
+    margin-bottom: 80px !important;
+  }
+}
+/*=== 公共模块样式 ===*/
+/*header*/
+#header {
+  background-color: #fff;
+}
+#header .navbar {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  margin-bottom: 0;
+}
+#header .navbar-brand {
+  padding-top: 10.5px;
+  padding-bottom: 10.5px;
+}
+#header .navbar-nav > li > a {
+  font-size: 12px;
+  color: #333333;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+#header .navbar-toggle {
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
+}
+#header .navbar-toggle .icon-bar {
+  background-color: #333333;
+}
+@media (max-width: 767px) {
+  .nav.navbar-nav.pull-right {
+    float: left !important;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #header .navbar-nav > li > a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+#footer {
+  background-color: #cecece;
+  border-bottom: 4px solid #f2f2f2;
+}
+.footer_nav {
+  background-color: #616161;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.footer_nav_links {
+  text-align: center;
+  font-size: 12px;
+}
+.footer_nav_links a {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.footer_nav_links a:after {
+  content: "/";
+  margin-left: 30px;
+}
+.footer_nav_links a:last-child:after {
+  display: none;
+}
+@media (max-width: 767px) {
+  .footer_nav_links a {
+    line-height: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footer_nav_links a:after {
+    margin-left: 20px;
+  }
+}
+.footer_info {
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+  line-height: 2em;
+  padding-top: 20px;
+}
+.footer_tel {
+  text-align: center;
+  font-size: 12px;
+  color: #414141;
+  line-height: 2em;
+}
+.footer_tel img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.footer_social {
+  text-align: center;
+  padding-top: 5px;
+}
+.footer_social a {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.footer_social .fa.fa-linkedin {
+  width: 25px;
+  height: 25px;
+  background-color: #4d4d4d;
+  border-radius: 50%;
+  vertical-align: middle;
+  color: #cccccc;
+  font-size: 14px;
+  padding-top: 5px;
+}
+.footer_copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.footer_copyright a {
+  color: #666666;
+}
+#footer > .container {
+  position: relative;
+}
+.footer_backtotop {
+  position: absolute;
+  width: 67px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .footer_backtotop {
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=maps/common.css.map */
