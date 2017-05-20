@@ -1,0 +1,23 @@
+#products_detail_breadcrumbs {
+    background-color: #f8f8f8;
+    .breadcrumb {
+        > li {
+            color: #333333;
+            font-size: 12px;
+            &.active {
+                color: #d71c1c;
+            }
+            &+li:before {
+                color: #888888;
+                content: ">";
+                padding: 0 10px;
+            }
+            &:first-child+li:before {
+                display: none;
+            }
+            a {
+                color: #888888;
+            }
+        }
+    }
+}

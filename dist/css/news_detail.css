@@ -1,0 +1,179 @@
+#news_detail {
+  padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  #news_detail {
+    padding-bottom: 20px;
+  }
+}
+.news_detail_section2 {
+  margin-left: 145px;
+  margin-right: 145px;
+  position: relative;
+  top: -75px;
+  margin-bottom: -75px;
+  background-color: #f2f2f2;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .news_detail_section2 {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .news_detail_section2 {
+    margin-left: 50px;
+    margin-right: 50px;
+    top: -50px;
+    margin-bottom: -50px;
+  }
+  .news_detail_section2 .news_detail_section2_inner {
+    padding: 30px 30px 0 30px;
+  }
+}
+@media (max-width: 767px) {
+  .news_detail_section2 {
+    margin-left: 0;
+    margin-right: 0;
+    position: initial;
+    margin-bottom: 0;
+  }
+  .news_detail_section2 .news_detail_section2_inner {
+    padding: 30px 0 0 0;
+  }
+}
+.news_detail_section2 .news_detail_content img,
+.news_detail_section4 .news_detail_content img {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .news_detail_section2 .news_detail_content img,
+  .news_detail_section4 .news_detail_content img {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .news_detail_section2 .news_detail_content img,
+  .news_detail_section4 .news_detail_content img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .news_detail_section2 .news_detail_content img,
+  .news_detail_section4 .news_detail_content img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.news_detail_section2_inner {
+  padding: 50px 60px 0 60px;
+}
+.news_detail_section4 {
+  padding-left: 205px;
+  padding-right: 205px;
+  padding-top: 50px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .news_detail_section4 {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .news_detail_section4 {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .news_detail_section4 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
+.news_detail_title {
+  text-align: center;
+  font-size: 18px;
+  color: #050505;
+}
+.news_detail_time {
+  font-size: 14px;
+  color: #050505;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.news_detail_content {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.8em;
+}
+.news_detail_content p {
+  margin-bottom: 20px;
+}
+.news_detail_content a {
+  color: #666666;
+}
+#news_social_share .jiathis_style {
+  width: 252px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#news_social_share .jiathis_style > a.clearfix {
+  float: left;
+  display: block;
+}
+#news_social_share .jiathis_style .jtico {
+  background-position: center;
+  height: 25px !important;
+  line-height: 25px !important;
+  padding-left: 26px !important;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#news_social_share .jiathis_style .jtico_weixin {
+  background-image: url(../images/ui/footer_weixin_icon.png);
+}
+#news_social_share .jiathis_style .jtico_fb {
+  background-image: url(../images/ui/footer_facebook_icon.png);
+}
+#news_social_share .jiathis_style .jtico_pinterest {
+  background-image: url(../images/ui/footer_pingterest_icon.png);
+}
+#news_social_share .jiathis_style .jtico_twitter {
+  background-image: url(../images/ui/footer_twitter_icon.png);
+}
+#news_social_share .jiathis_style .jtico_tsina {
+  background-image: url(../images/ui/footer_weibo_icon.png);
+}
+#news_social_share .jiathis_style .jtico_linkedin {
+  background-image: url(../images/ui/footer_linkedin_icon.png);
+}
+#jiathis_weixin_modal {
+  width: 300px !important;
+  height: 300px !important;
+  margin-left: -150px !important;
+  margin-top: -150px !important;
+}
+#jiathis_weixin_modal h3#jiathis_weixin_h3 {
+  font-size: 18px;
+}
+#jiathis_weixin_modal p#jiathis_webchat {
+  margin-bottom: 15px;
+}
+#jiathis_weixin_modal p#jiathis_webchat img {
+  width: 150px;
+  height: 150px;
+}
+#jiathis_weixin_modal #jiathis_modal_body,
+#jiathis_weixin_modal #jiathis_modal_footer {
+  height: auto !important;
+}
+
+/*# sourceMappingURL=maps/news_detail.css.map */

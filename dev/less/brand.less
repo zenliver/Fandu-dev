@@ -1,0 +1,127 @@
+.brand_story_head {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.brand_story_head_title {
+    font-size: 18px;
+    color: #333333;
+    padding-bottom: 8px;
+}
+.brand_story_head_slogan {
+    font-size: 12px;
+    color: #666666;
+}
+.brand_story_body {
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 1.8em;
+    color: #666666;
+    .section_title {
+        font-size: 16px;
+        color: #333333;
+        padding-bottom: 15px;
+    }
+    .section1_text {
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        @media (max-width: 767px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .section2 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-left: 60px;
+        margin-right: 60px;
+        border-top: 2px dotted #e0e0e0;
+        border-bottom: 2px dotted #e0e0e0;
+        @media (max-width: 767px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            .col-md-6 {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .section2_text {
+                max-height: 294px;
+                overflow: hidden;
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    max-height: 254px;
+                }
+            }
+        }
+        .row1 {
+            .section2_text {
+                padding-top: 60px;
+                padding-left: 60px;
+                @media (max-width: 767px) {
+                    padding: 20px 0;
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    padding: 30px 0;
+                }
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    padding-top: 40px;
+                    padding-left: 40px;
+                }
+            }
+        }
+        .row2 {
+            .section2_text {
+                padding-top: 60px;
+                padding-right: 60px;
+                @media (max-width: 767px) {
+                    padding: 20px 0 0 0;
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    padding: 30px 0 0 0;
+                }
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    padding-top: 40px;
+                    padding-right: 40px;
+                }
+            }
+            .col-md-6:nth-child(1) {
+                @media (min-width: 992px) {
+                    float: right;
+                }
+            }
+        }
+    }
+    .section3 {
+        padding: 60px;
+        @media (max-width: 767px) {
+            padding: 30px 15px;
+        }
+        .row {
+            .col-md-6:nth-child(1) {
+                @media (min-width: 992px) {
+                    float: right;
+                }
+            }
+        }
+        .section3_text {
+            padding-top: 30px;
+            padding-right: 60px;
+            @media (max-width: 991px) {
+                padding-right: 0;
+            }
+        }
+    }
+}

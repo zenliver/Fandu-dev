@@ -1,0 +1,23 @@
+#products_detail_breadcrumbs {
+  background-color: #f8f8f8;
+}
+#products_detail_breadcrumbs .breadcrumb > li {
+  color: #333333;
+  font-size: 12px;
+}
+#products_detail_breadcrumbs .breadcrumb > li.active {
+  color: #d71c1c;
+}
+#products_detail_breadcrumbs .breadcrumb > li + li:before {
+  color: #888888;
+  content: ">";
+  padding: 0 10px;
+}
+#products_detail_breadcrumbs .breadcrumb > li:first-child + li:before {
+  display: none;
+}
+#products_detail_breadcrumbs .breadcrumb > li a {
+  color: #888888;
+}
+
+/*# sourceMappingURL=maps/products_detail.css.map */

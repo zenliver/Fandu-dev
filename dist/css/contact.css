@@ -1,0 +1,64 @@
+.contact_cover {
+  background-image: url(../images/ui/contact_cover.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 406px;
+}
+@media (max-width: 767px) {
+  .contact_cover {
+    height: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact_cover {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact_cover {
+    height: 350px;
+  }
+}
+.contact_showroom,
+.contact_factory_address {
+  background-color: #fff;
+  padding: 40px 40px;
+}
+@media (max-width: 767px) {
+  .contact_showroom,
+  .contact_factory_address {
+    padding: 20px 15px;
+  }
+}
+.mod_title {
+  font-size: 14px;
+  color: #333333;
+  padding-bottom: 20px;
+}
+.mod_content {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.8em;
+}
+.contact_factory_img {
+  background-size: cover;
+  background-position: center;
+  height: 395px;
+}
+@media (max-width: 767px) {
+  .contact_factory_img {
+    height: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact_factory_img {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact_factory_img {
+    height: 350px;
+  }
+}
+
+/*# sourceMappingURL=maps/contact.css.map */

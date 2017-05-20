@@ -41,6 +41,33 @@ ul {
 .btn:focus {
   outline: none;
 }
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-radius: 0;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: 0;
+}
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 15px;
+}
+@media (max-width: 767px) {
+  .breadcrumb {
+    padding: 15px 0;
+  }
+}
+.table > thead > tr > th {
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: scroll;
+  }
+}
 /*通用padding、margin*/
 @media (max-width: 767px) {
   .pt30-xs {
@@ -131,6 +158,9 @@ ul {
   padding-left: 35px;
   padding-right: 35px;
 }
+#header .navbar-nav > li.active > a {
+  color: #dd1111;
+}
 #header .navbar-toggle {
   border-color: #f2f2f2;
   background-color: #f2f2f2;
@@ -155,6 +185,12 @@ ul {
 #footer {
   background-color: #cecece;
   border-bottom: 4px solid #f2f2f2;
+  margin-top: 60px;
+}
+@media (max-width: 767px) {
+  #footer {
+    margin-top: 40px;
+  }
 }
 .footer_nav {
   background-color: #616161;
@@ -250,6 +286,166 @@ ul {
     margin-right: auto;
     text-align: center;
   }
+}
+.case {
+  border: 1px solid #d8d8d8;
+}
+@media (min-width: 768px) {
+  .case_item:nth-child(2n) .col-md-6:first-child {
+    float: right;
+  }
+}
+.case_item .col-md-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.case_item {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+}
+.case_text {
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.case_title {
+  font-size: 14px;
+}
+.case_title a {
+  color: #333333;
+}
+.case_data {
+  font-size: 12px;
+  color: #888888;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.case_desc {
+  font-size: 12px;
+  color: #888888;
+  line-height: 2em;
+}
+@media (min-width: 768px) {
+  .case_item:nth-child(2n) .case_title,
+  .case_item:nth-child(2n) .case_data {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .case_text {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .case_data {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .case_desc {
+    max-height: 144px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 767px) {
+  .case_text {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .case_data {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .case_item {
+    padding-bottom: 20px;
+  }
+}
+.pagination li a {
+  color: #9e9ca0;
+}
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: #e83e0b;
+  border-color: #e83e0b;
+}
+.page_head {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.page_head_title {
+  font-size: 18px;
+  color: #333333;
+  padding-bottom: 8px;
+}
+.page_head_slogan {
+  font-size: 12px;
+  color: #666666;
+}
+#brand_subnav {
+  background-color: #fafafa;
+}
+#brand_subnav .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 1200px) {
+  #brand_subnav .row {
+    padding-left: 210px;
+    padding-right: 210px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #brand_subnav .row {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #brand_subnav .row {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 767px) {
+  #brand_subnav .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+#brand_subnav .row .col-md-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#brand_subnav .row .col-md-3 a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
+}
+.brand_subnav_item.active {
+  background-color: #ededed;
+}
+.brand_subnav_icon {
+  padding-top: 40px;
+}
+.brand_subnav_icon img {
+  height: 46px;
+}
+@media (max-width: 767px) {
+  .brand_subnav_icon img {
+    height: 35px;
+  }
+}
+.brand_subnav_title {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /*# sourceMappingURL=maps/common.css.map */
