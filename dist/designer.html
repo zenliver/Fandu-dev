@@ -30,7 +30,7 @@
         <div class="navbar">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="/" class="navbar-brand">
+                    <a href="./" class="navbar-brand">
                         <img src="images/ui/logo.png" alt="">
                     </a>
                     <button type="button" name="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-menu">
@@ -46,7 +46,7 @@
                         <li><a href="designer.html">设计师</a></li>
                         <li><a href="products.html">产品</a></li>
                         <li><a href="news.html">新闻资源</a></li>
-                        <li><a href="#jiameng.html">合作多赢</a></li>
+                        <li><a href="jiameng.html">合作多赢</a></li>
                         <li><a href="contact.html">联络我们</a></li>
                     </ul>
                 </div>
@@ -147,7 +147,7 @@
                     <a href="designer.html">设计师</a>
                     <a href="products.html">产品</a>
                     <a href="news.html">新闻资源</a>
-                    <a href="#jiameng.html">合作多赢</a>
+                    <a href="jiameng.html">合作多赢</a>
                     <a href="contact.html">联络我们</a>
                 </div>
             </div>
@@ -180,23 +180,14 @@
     <!-- js -->
     <script src="js/jquery-1.12.4.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/libs/scrollReveal.min.js" charset="utf-8"></script>
+    <script src="js/libs/scrollreveal/3.3.5/scrollreveal.min.js" charset="utf-8"></script>
     <script src="js/libs/jquery.zhjsplugin.js" charset="utf-8"></script>
     <script src="js/libs/elevator.min.js" charset="utf-8"></script>
-
-    <script src="http://cdn.bootcss.com/jquery.actual/1.0.19/jquery.actual.min.js"></script>
-
+    <script src="js/libs/jquery.actual.min.js" charset="utf-8"></script>
     <script src="js/common.js" charset="utf-8"></script>
 
     <script type="text/javascript">
-        var srConfig = {
-            reset:true,
-            mobile:true
-        }
-        window.sr = new scrollReveal(srConfig);
-    </script>
-
-    <script type="text/javascript">
+        // 返回顶部
         window.onload = function() {
             var elevator = new Elevator({
                 element: document.querySelector(".footer_backtotop img"),
@@ -205,7 +196,7 @@
                     // $("body").animateCss("bounce");
                 }
             });
-        }
+        };
     </script>
 
 

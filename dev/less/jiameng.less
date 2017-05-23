@@ -1,0 +1,172 @@
+.jiameng_body {
+    background-color: #fff;
+    padding: 40px 50px;
+    @media (max-width: 767px) {
+        padding: 20px 15px;
+    }
+}
+.jiameng_model, .jiameng_condition, .jiameng_jobs {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+.jiameng_model_title, .jiameng_condition_title, .jiameng_me_title, .jiameng_jobs_title {
+    font-size: 14px;
+    color: #333333;
+    padding-bottom: 25px;
+}
+.jiameng_model_content {
+    .col-md-4 {
+        &:nth-child(2) {
+            @media (max-width: 767px) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+.jiameng_model_detail {
+    padding-top: 15px;
+}
+.jiameng_model_detail_item {
+    font-size: 12px;
+    color: #666666;
+    line-height: 2em;
+    background-image: url(../images/ui/jiameng_model_dot.png);
+    background-position: left 9px;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+}
+.jiameng_condition_detail {
+    font-size: 12px;
+    color: #666666;
+    line-height: 2em;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    label {
+        font-size: 12px;
+        color: #888888;
+        font-weight: normal;
+        span.required {
+            color: #d2423e;
+            margin-right: 5px;
+        }
+    }
+    input.form-control {
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        font-size: 12px;
+    }
+}
+.form-group-hasInner {
+    @media (min-width: 992px) {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+        > .col-md-6 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+.form-group-inner, .form-group-outter {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    .col-md-3, .col-md-9, .col-md-2, .col-md-10, .col-md-1, .col-md-8 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.form-group-inner {
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
+.form-group-textarea {
+    padding-bottom: 10px;
+    > label {
+        display: block;
+        padding-bottom: 10px;
+    }
+    > textarea {
+        width: 100%;
+        height: 220px;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 12px;
+    }
+}
+.form-horizontal .control-label {
+    text-align: left;
+    @media (min-width: 768px) {
+        padding-top: 10px;
+    }
+}
+.label_last {
+    text-align: right !important;
+}
+.btn_submit {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    background-color: #d2423e;
+    color: #fff;
+    font-size: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: 1px solid #d2423e;
+    &:hover {
+        color: #fff;
+        // background-color: #fff;
+        // border: 1px solid #d2423e;
+    }
+}
+
+// 加入页面 join.html
+
+.jiameng_model_start {
+    font-size: 12px;
+    color: #666666;
+    line-height: 2em;
+    padding-bottom: 30px;
+}
+.jiameng_model_detail_title {
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.jiameng_model_detail_body {
+    font-size: 12px;
+    color: #666666;
+    line-height: 2em;
+}
+
+.jiameng_jobs_detail {
+    font-size: 12px;
+    color: #666666;
+}
+.jiameng_jobs_list {
+    ul {
+        li {
+            background-image: url(../images/ui/jiameng_jobs_dot.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            padding-left: 15px;
+            line-height: 2em;
+            a {
+                color: #666666;
+            }
+        }
+    }
+}

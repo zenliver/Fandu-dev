@@ -447,5 +447,58 @@ ul {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+#jiameng_subnav {
+  background-color: #fafafa;
+}
+#jiameng_subnav .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 1200px) {
+  #jiameng_subnav .row {
+    padding-left: 370px;
+    padding-right: 370px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #jiameng_subnav .row {
+    padding-left: 280px;
+    padding-right: 280px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #jiameng_subnav .row {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+@media (max-width: 767px) {
+}
+#jiameng_subnav .row .col-md-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#jiameng_subnav .row .col-md-6 a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
+}
+.jiameng_subnav_item.active {
+  background-color: #ededed;
+}
+.jiameng_subnav_icon {
+  padding-top: 25px;
+}
+@media (max-width: 767px) {
+  .jiameng_subnav_icon img {
+    height: 45px;
+  }
+}
+.jiameng_subnav_title {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
 
 /*# sourceMappingURL=maps/common.css.map */
