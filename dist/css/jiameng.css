@@ -65,7 +65,7 @@
   padding: 0;
   font-size: 12px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .form-group-hasInner {
     margin-left: -10px !important;
     margin-right: -10px !important;
@@ -73,6 +73,11 @@
   .form-group-hasInner > .col-md-6 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .form-group-hasInner {
+    margin-bottom: 0;
   }
 }
 .form-group-inner,
@@ -83,6 +88,20 @@
   margin-right: 0 !important;
   padding-left: 20px;
   padding-right: 20px;
+}
+@media (max-width: 767px) {
+  .form-group-inner,
+  .form-group-outter {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group-inner,
+  .form-group-outter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .form-group-inner .col-md-3,
 .form-group-outter .col-md-3,
@@ -114,11 +133,106 @@
 .form-group-textarea > textarea {
   width: 100%;
   height: 220px;
-  padding: 10px;
   background-color: transparent;
   border: none;
   outline: none;
   font-size: 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group-style1 .col-md-2 {
+    width: 20%;
+  }
+  .form-group-style1 .col-md-10 {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-group-style2 .col-md-2 {
+    width: 20%;
+  }
+  .form-group-style2 .col-md-10 {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group-style2 .col-md-2 {
+    width: 30%;
+  }
+  .form-group-style2 .col-md-10 {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-group-style3 .col-md-2 {
+    width: 20%;
+  }
+  .form-group-style3 .col-md-9 {
+    width: 71.6666%;
+  }
+}
+@media (max-width: 767px) {
+  .form-group-style4 .col-md-3 {
+    width: 42%;
+  }
+  .form-group-style4 .col-md-8 {
+    width: 49.66666667%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group-style4 .col-md-3 {
+    width: 40%;
+  }
+  .form-group-style4 .col-md-8 {
+    width: 51.66666667%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-group-style4 .col-md-3 {
+    width: 28%;
+  }
+  .form-group-style4 .col-md-8 {
+    width: 63.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .form-group-style5 .col-md-2 {
+    width: 10%;
+  }
+  .form-group-style5 .col-md-10 {
+    width: 90%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-group-style5 .col-md-2 {
+    width: 12%;
+  }
+  .form-group-style5 .col-md-10 {
+    width: 88%;
+  }
+}
+@media (min-width: 1200px) {
+  .form-group-style6 .col-md-2 {
+    width: 8%;
+  }
+  .form-group-style6 .col-md-10 {
+    width: 92%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-group-style6 .col-md-2 {
+    width: 10%;
+  }
+  .form-group-style6 .col-md-10 {
+    width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group-style6 .col-md-2 {
+    width: 14%;
+  }
+  .form-group-style6 .col-md-10 {
+    width: 86%;
+  }
 }
 .form-horizontal .control-label {
   text-align: left;
@@ -126,6 +240,12 @@
 @media (min-width: 768px) {
   .form-horizontal .control-label {
     padding-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .form-horizontal .control-label {
+    padding-top: 9px;
+    margin-bottom: 9px;
   }
 }
 .label_last {
@@ -162,9 +282,31 @@
   color: #666666;
   line-height: 2em;
 }
+.jiameng_jobs_body .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.jiameng_jobs_body .row .col-md-8,
+.jiameng_jobs_body .row .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .jiameng_jobs_detail {
   font-size: 12px;
   color: #666666;
+}
+@media (min-width: 992px) {
+  .jiameng_jobs_detail {
+    padding-left: 40px;
+  }
+}
+.jiameng_jobs_desc {
+  padding-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .jiameng_jobs_desc {
+    padding-top: 30px;
+  }
 }
 .jiameng_jobs_list ul li {
   background-image: url(../images/ui/jiameng_jobs_dot.png);
@@ -172,6 +314,18 @@
   background-repeat: no-repeat;
   padding-left: 15px;
   line-height: 2em;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .jiameng_jobs_list ul li {
+    float: left;
+    width: 33.3333%;
+  }
+}
+@media (max-width: 767px) {
+  .jiameng_jobs_list ul li {
+    float: left;
+    width: 50%;
+  }
 }
 .jiameng_jobs_list ul li a {
   color: #666666;
