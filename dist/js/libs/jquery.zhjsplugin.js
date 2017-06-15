@@ -68,6 +68,12 @@ $.fn.extend({
         this.addClass('animated ' + animationName).one(animationEnd, function() {
             $(this).removeClass('animated ' + animationName);
         });
+    },
+    addAnimation: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass(animationName).one(animationEnd, function() {
+            $(this).removeClass(animationName);
+        });
     }
 });
 
@@ -103,7 +109,7 @@ for (var i = 0; i < navbarLis.length; i++) {
     animationDelay=animationDelay+0.05;
 }
 $(".navbar-toggle").click(function () {
-    $(".navbar-nav li").toggleClass("animated fadeInUp");
+    $(".navbar-nav li").toggleClass("animated fadeInRight");
     // $(".navbar-nav li").animateCss("fadeInUp");
 });
 

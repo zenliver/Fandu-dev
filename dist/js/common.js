@@ -53,7 +53,38 @@ $(function () {
             $(this).removeClass("darken");
         });
     }
-    imgDarken(".case_item .case_img img, .index_news_body .thumbnail>a>img");
+    // imgDarken(".case_item .case_img img, .index_news_body .thumbnail>a>img");
+
+    // 鼠标滑过图片后图片放大
+    function imgScale(imgSelector) {
+        $(imgSelector).each(function () {
+            $(this).parent().css("display","block"); // 必须先设为display:block，否则如果img的父元素是a的话无法获取正确的宽高
+        });
+        $(window).load(function () {
+            $(imgSelector).each(function () {
+                var imgParentElWidth = $(this).parent().width();
+                var imgParentElHeight = $(this).parent().height();
+                $(this).mouseover(function () {
+                    $(this).parent().css({
+                        "overflow": "hidden",
+                        "max-width": (imgParentElWidth+1)+"px",
+                        "max-height": (imgParentElHeight+1)+"px"
+                    });
+                    $(this).addClass("scaleLarger");
+                });
+                $(this).mouseout(function () {
+                    $(this).removeClass("scaleLarger");
+                    $(this).addAnimation("scaleDefault");
+                });
+            });
+
+        });
+    }
+    imgScale(".case_item .case_img img");
+    imgScale(".index_news_body .thumbnail>a>img");
+    imgScale(".brand_story_body .col-md-6 img");
+    imgScale(".products_item>a>img");
+    imgScale("#honor .col-xs-6>a>img");
 
     // 手动添加动画效果
     function addAnimation(selector,animationCssName) {
@@ -70,7 +101,21 @@ $(function () {
         $(this).animateCss("rotateIn");
     });
 
-    // 添加sr动画
+    // 顶部导航置顶效果
+    $(window).scroll(function () {
+        var scrollHeight = $(window).scrollTop();
+        // console.log(scrollHeight);
+        if (scrollHeight >= 1) {
+            $("#header").addClass("fixed_top");
+            $("body").addClass("padding_top");
+        }
+        else {
+            $("#header").removeClass("fixed_top");
+            $("body").removeClass("padding_top");
+        }
+    });
+
+    // sr动画
 
         // 启动sr
         window.sr = ScrollReveal({
@@ -78,7 +123,7 @@ $(function () {
             mobile: true,
             easing: 'ease',
             distance: '30px',
-            // opacity: 0.5,
+            opacity: 0,
             scale: 1
         });
 
@@ -94,6 +139,13 @@ $(function () {
             duration: 1000,
             delay: 400
         });
+        sr.reveal(".index_products_title_cn, .index_case_head_cn, .index_news_head_cn", {
+            origin: "top",
+            duration: 600
+        });
+        sr.reveal(".index_products_title_en, .index_case_head_en, .index_news_head_en", {
+            duration: 600
+        });
         // 新闻列表页
         sr.reveal(".news_item", {
             duration: 1000
@@ -101,19 +153,19 @@ $(function () {
         if (screenWidth >= 992) {
             // 品牌页
             sr.reveal(".brand_story_body .section2 .row:nth-child(2n+1) .col-md-6:nth-child(1)", {
-                duration: 1500,
+                duration: 1000,
                 origin: "top"
             });
             sr.reveal(".brand_story_body .section2 .row:nth-child(2n+1) .col-md-6:nth-child(2)", {
-                duration: 1500,
+                duration: 1000,
                 origin: "bottom"
             });
             sr.reveal(".brand_story_body .section2 .row:nth-child(2n) .col-md-6:nth-child(1)", {
-                duration: 1500,
+                duration: 1000,
                 origin: "right"
             });
             sr.reveal(".brand_story_body .section2 .row:nth-child(2n) .col-md-6:nth-child(2)", {
-                duration: 1500,
+                duration: 1000,
                 origin: "left"
             });
 
@@ -121,26 +173,25 @@ $(function () {
         else {
             // 品牌页
             sr.reveal(".brand_story_body .section2 .row .col-md-6", {
-                duration: 1500
+                duration: 1000
             });
         }
         // 品牌页
         sr.reveal(".brand_story_body .section3 .row .col-md-6:nth-child(1)", {
-            duration: 1500,
+            duration: 1000,
             origin: "top"
         });
         sr.reveal(".brand_story_body .section3 .row .col-md-6:nth-child(2)", {
-            duration: 1500,
+            duration: 1000,
             origin: "bottom"
         });
         // 案例
-        sr.reveal('.case_item', {
-            duration: 1000
-        });
+        // sr.reveal('.case_item', {
+        //     duration: 1000
+        // });
         // 产品列表
         sr.reveal(".products_item", {
-            duration: 1000,
-            delay: 200
+            duration: 1000
         });
 
 

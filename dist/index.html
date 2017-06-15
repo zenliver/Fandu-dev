@@ -9,11 +9,12 @@
     <!-- css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/libs/swiper/css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="js/libs/videojs/video-js.min.css"> -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <link rel="stylesheet" href="js/libs/videojs/video-js.min.css">
-    <link rel="stylesheet" href="js/libs/swiper/css/swiper.min.css">
+
     <link rel="stylesheet" href="css/index.css">
 
     <title>中山市凡度家居科技有限公司</title>
@@ -57,6 +58,45 @@
     </div>
 
 
+    <div id="index_slides">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="swiper-slide-wrapper" style="background-image: url(../images/ui/banner_test1.jpg);">
+                        <div class="swiper-slide-bigtext">凡度●办公新选择</div>
+                        <div class="swiper-slide-smtxt">选择凡度 选择改变</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-wrapper" style="background-image: url(../images/ui/banner_test2.jpg);">
+                        <div class="swiper-slide-bigtext">凡度●办公新选择</div>
+                        <div class="swiper-slide-smtxt">选择凡度 选择改变</div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-slide">
+                    <div class="swiper-slide-wrapper" style="background-image: url(../images/ui/banner_test1.jpg);">
+                        <div class="swiper-slide-bigtext">凡度●办公新选择</div>
+                        <div class="swiper-slide-smtxt">选择凡度 选择改变</div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+            <div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+
+            <!-- scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+    </div>
+    <!-- index_slides end -->
+
     <div id="index_video">
         <div class="container">
 
@@ -81,6 +121,7 @@
         </div>
     </div>
     <!-- index_video end -->
+
     <div id="index_products">
         <div class="container">
             <div class="index_products_title">
@@ -108,6 +149,18 @@
                         <div class="swiper-slide">
                             <div class="swiper_slide_img">
                                 <a href="products_detail.html" target="_blank"><img src="images/ui/index_products3.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <div class="swiper_slide_text"><a href="products.html" target="_blank">休闲系列</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper_slide_img">
+                                <a href="products_detail.html" target="_blank"><img src="images/ui/index_products4.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <div class="swiper_slide_text"><a href="products.html" target="_blank">休闲系列</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper_slide_img">
+                                <a href="products_detail.html" target="_blank"><img src="images/ui/index_products4.jpg" alt="" class="img-responsive"></a>
                             </div>
                             <div class="swiper_slide_text"><a href="products.html" target="_blank">休闲系列</a></div>
                         </div>
@@ -263,6 +316,9 @@
     <!-- js -->
     <script src="js/jquery-1.12.4.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/libs/swiper/js/swiper.jquery.min.js" charset="utf-8"></script>
+    <!-- <script src="js/libs/videojs/video.min.js" charset="utf-8"></script> -->
+    <!-- <script src="js/libs/videojs/ie8/videojs-ie8.min.js" charset="utf-8"></script> -->
     <script src="js/libs/scrollreveal/3.3.5/scrollreveal.min.js" charset="utf-8"></script>
     <script src="js/libs/jquery.zhjsplugin.js" charset="utf-8"></script>
     <script src="js/libs/elevator.min.js" charset="utf-8"></script>
@@ -283,20 +339,90 @@
     </script>
 
 
-    <!-- <script src="js/libs/videojs/video.min.js" charset="utf-8"></script> -->
-    <!-- <script src="js/libs/videojs/ie8/videojs-ie8.min.js" charset="utf-8"></script> -->
-    <script src="js/libs/swiper/js/swiper.jquery.min.js" charset="utf-8"></script>
-
     <script type="text/javascript">
         $(function () {
-            var mySwiper = new Swiper ('.swiper-container', {
+
+            // swiper效果
+            var bannerSwiper = new Swiper ('#index_slides .swiper-container', {
                 // Optional parameters
                 // direction: 'vertical',
                 loop: true,
 
                 // If we need pagination
-                pagination: '.swiper-pagination',
+                pagination: '#index_slides .swiper-pagination',
                 paginationClickable: true,
+                // slidesPerView: 4,
+                // spaceBetween: 100,
+
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                autoplay: 6000,
+                autoplayDisableOnInteraction: false,
+                speed: 1500
+
+                // And if we need scrollbar
+                // scrollbar: '.swiper-scrollbar',
+            })
+
+            $("#index_slides .swiper-slide-active .swiper-slide-bigtext").css("opacity","0");
+            $("#index_slides .swiper-slide-active .swiper-slide-smtxt").css("opacity","0");
+
+            $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeIn");
+            $("#index_slides .swiper-slide-active .swiper-slide-bigtext").attr("style","");
+            setTimeout(function () {
+                $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeIn");
+                $("#index_slides .swiper-slide-active .swiper-slide-smtxt").attr("style","");
+
+            },400);
+
+            setTimeout(function () {
+                $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+            },5000);
+            setTimeout(function () {
+                $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+            },5400);
+
+            bannerSwiper.on("slideChangeStart",function () {
+                var activeIndex = bannerSwiper.activeIndex;
+                console.log(activeIndex);
+                $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeIn");
+                setTimeout(function () {
+                    $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeIn");
+
+                },400);
+                // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeIn");
+                // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeIn");
+
+            });
+            bannerSwiper.on("slideChangeEnd",function () {
+                var activeIndex = bannerSwiper.activeIndex;
+                console.log(activeIndex);
+                setTimeout(function () {
+                    $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeOut");
+                    // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+                    // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+                },5000);
+                setTimeout(function () {
+                    $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeOut");
+                    // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+                    // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+                },5400);
+            });
+
+
+            var productsSwiper = new Swiper ('#index_products .swiper-container', {
+                // Optional parameters
+                // direction: 'vertical',
+                loop: true,
+
+                // If we need pagination
+                // pagination: '#index_products .swiper-pagination',
+                // paginationClickable: true,
                 slidesPerView: 4,
                 // spaceBetween: 50,
                 breakpoints: {
@@ -328,6 +454,7 @@
                 // And if we need scrollbar
                 // scrollbar: '.swiper-scrollbar',
             })
+
         });
     </script>
 

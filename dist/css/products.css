@@ -38,7 +38,8 @@
   text-decoration: none;
   display: block;
 }
-.products_subnav_item.active {
+.products_subnav_item.active,
+.products_subnav_item:hover {
   background-color: #ededed;
 }
 .products_subnav_icon {

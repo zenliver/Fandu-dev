@@ -421,7 +421,7 @@ ul {
     }
 }
 .brand_subnav_item {
-    &.active {
+    &.active, &:hover {
         background-color: #ededed;
     }
 }
@@ -476,7 +476,7 @@ ul {
     }
 }
 .jiameng_subnav_item {
-    &.active {
+    &.active, &:hover {
         background-color: #ededed;
     }
 }
@@ -502,9 +502,65 @@ ul {
     opacity: 0.5;
     transition: opacity 0.5s ease;
 }
+.scaleLarger {
+    animation: scaleLarger 0.3s ease forwards;
+    // transform: scale(1.1);
+    // transition: transform 0.3s ease;
+}
+.scaleDefault {
+    animation: scaleDefault 0.3s ease forwards;
+    // transform: scale(1);
+    // transition: transform 0.3s ease;
+}
+@keyframes scaleLarger {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@keyframes scaleDefault {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .rotateZ {
     transform: rotateZ(180deg);
     transition: all ease 1s;
+}
+#header.fixed_top {
+    @media (min-width: 1200px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 11;
+        border-bottom: 1px solid #ccc;
+        box-shadow: 0 0 5px 1px #ccc;
+    }
+    .navbar {
+        animation: heightDecrease 0.5s ease forwards;
+    }
+}
+@keyframes heightDecrease {
+    0% {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+    100% {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+body.padding_top {
+    @media (min-width: 1200px) {
+        padding-top: 98px;
+    }
+
 }
 #products_subnav .container, #jiameng_subnav .container, #brand_subnav .container {
     animation: fadeInRight 0.5s ease;
@@ -512,7 +568,7 @@ ul {
 
 @keyframes fadeInRight {
     0% {
-        transform: translateX(150px);
+        transform: translateX(200px);
         opacity: 0;
     }
     100% {
@@ -562,14 +618,16 @@ ul {
         }
     }
     .contact_cover, .designer_cover {
-        animation: scaleX 1s ease;
+        // animation: scaleX 1s ease;
     }
     @keyframes scaleX {
         0% {
             transform: scaleX(0);
+            opacity: 0;
         }
         100% {
             transform: scaleX(1);
+            opacity: 1;
         }
     }
     @keyframes scaleY {
@@ -580,3 +638,162 @@ ul {
             transform: scaleY(1);
         }
     }
+
+// 20170605新增两个页面
+
+// 资质与荣誉
+#honor {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .row {
+        .col-xs-6 {
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 767px) {
+        padding-left: 10px;
+        padding-right: 10px;
+        .row {
+            margin-left: -5px;
+            margin-right: -5px;
+            .col-xs-6 {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+
+}
+#honor_slides {
+    // background-color: #fff;
+    // padding-top: 30px;
+    // padding-bottom: 30px;
+    display: none;
+    padding-left: 200px;
+    padding-right: 200px;
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    @media (max-width: 767px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        background-image: none;
+        width: 16px;
+        i.fa {
+            font-size: 44px;
+            color: #eee;
+        }
+    }
+    .swiper-pagination-bullet {
+        background-color: #fff;
+    }
+}
+
+// 服务体验
+#experience {
+    background-color: #fff;
+}
+
+// 20170606：首页新增滑动动画效果
+#index_video {
+    display: none;
+}
+#index_slides {
+    .swiper-slide-wrapper {
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+        padding-top: 248px;
+        @media (max-width: 767px) {
+            height: 200px;
+            padding-top: 71px;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            height: 400px;
+            padding-top: 160px;
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            height: 500px;
+            padding-top: 198px;
+        }
+        .swiper-slide-bigtext {
+            font-size: 44px;
+            // font-family: "Microsoft YaHei Light";
+            color: #fff;
+            text-align: center;
+            &.fadeIn {
+                animation: slideBigtextFadeIn 2.5s ease forwards;
+            }
+            &.fadeOut {
+                animation: slideBigtextFadeOut 3s ease forwards;
+            }
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                font-size: 30px;
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+
+            }
+        }
+        .swiper-slide-smtxt {
+            font-size: 22px;
+            // font-family: "Microsoft YaHei Light";
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+            &.fadeIn {
+                animation: slideBigtextFadeIn 2.5s ease forwards;
+            }
+            &.fadeOut {
+                animation: slideBigtextFadeOut 3s ease forwards;
+            }
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                font-size: 20px;
+            }
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        background-image: none;
+        display: none;
+    }
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        border: 1px solid #fff;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+}
+@keyframes slideBigtextFadeIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBigtextFadeOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
