@@ -4,10 +4,12 @@
   color: #666666;
   line-height: 1.8em;
   padding: 40px 50px;
+  padding-top: 0;
 }
 @media (max-width: 767px) {
   #designer_body {
     padding: 15px;
+    padding-top: 0;
   }
 }
 .designer_cover {
@@ -15,10 +17,14 @@
   background-size: cover;
   background-position: center;
   height: 404px;
+  margin-left: -50px;
+  margin-right: -50px;
 }
 @media (max-width: 767px) {
   .designer_cover {
     height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -37,6 +43,18 @@
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  .designer_theory {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .designer_theory {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 .designer_theory_content {
   padding-bottom: 30px;
@@ -151,6 +169,9 @@
   font-size: 16px;
   color: #333333;
   padding-bottom: 20px;
+}
+.designer_profile_modal .modal-dialog .modal-content .modal-body .designer_profile_modal_info .designer_name .designer_name_tip {
+  margin-right: 10px;
 }
 .designer_photo img {
   border-radius: 50%;

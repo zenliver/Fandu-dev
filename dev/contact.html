@@ -2,7 +2,6 @@
 <html lang="zh-cn">
 <head>
 @@include("include/meta.html")
-    <link rel="stylesheet" href="css/contact.css">
 
     <title>联系我们 - 中山市凡度家居科技有限公司</title>
 
@@ -12,35 +11,166 @@
 
 @@include("include/header.html")
 
+    <div class="page_subnav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <a href="contact.html">
+                        <div class="page_subnav_item active">
+                            <div class="page_subnav_icon">
+                                <img src="images/ui/contact_icon.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="page_subnav_title">联系我们</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <a href="showroom.html">
+                        <div class="page_subnav_item">
+                            <div class="page_subnav_icon">
+                                <img src="images/ui/showroom_icon.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="page_subnav_title">各地展厅</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page_subnav end -->
+
     <div class="page_head">
         <div class="page_head_title">联系我们</div>
         <div class="page_head_slogan">将您的问题告诉我们</div>
     </div>
 
     <div class="container">
-        <div class="contact_cover"></div>
-        <div class="contact_showroom">
-            <div class="mod_title">凡度展厅</div>
-            <div class="mod_content">
-                <p>
-                    凡度集产品研发、制造、营销、检测为一体，研究人在空间的流动，从而驱动设计。以创新的设计，优质的产品，为企业提供有效的空间解决建议。我们邀请您与我们取得联系，了解您需要解决的问题。
-                </p>
-                <p>
-                    地址：广东省中山市港口镇沙港东路4号 <br>
-                    联系方式：+86-760-88518268
-                </p>
-            </div>
-        </div>
         <div class="contact_factory_img" style="background-image: url(images/ui/contact_factory.jpg);"></div>
-        <div class="contact_factory_address">
-            <div class="mod_title">凡度胶板生产基地</div>
-            <div class="mod_content">
-                <p>
-                    优质的材料，是体现设计的重要部分。凡度胶板生产基地，采用智能化的制造，全自动化流水线，在保证产量的同时更注重细节。凡度产品，从原料上严格把控，保持产品能展现出最完美的状态。
-                </p>
-                <p>
-                    地址：广东省中山市港口镇沙港中路12号
-                </p>
+        <div class="contact_factory_content">
+            <div class="contact_factory_desc">
+                <div class="mod_title">凡度胶板生产基地</div>
+                <div class="mod_content">
+                    <p>优质的材料，是体现设计的重要部分。凡度胶板生产基地，采用智能化的制造，全自动化流水线，在保证产量的同时更注重细节。凡度产品，从原料上严格把控，保持产品能展现出最完美的状态。</p>
+                </div>
+            </div>
+            <div class="contact_factory_address">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact_factory_address_txt">
+                            <div class="mod_title">联系方式：</div>
+                            <div class="contact_factory_address_txt_address">广东省中山市港口镇沙港中路12号</div>
+                            <div class="contact_factory_address_txt_phone">400-888-9898</div>
+                            <div class="contact_factory_address_txt_email">Vandu@vandudesign.com</div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <!--引用百度地图API-->
+                        <style type="text/css">
+                            html,body{margin:0;padding:0;}
+                            .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+                            .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+                        </style>
+                        <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+                        <!--百度地图容器-->
+                        <div id="contact_factory_address_map"></div>
+                        <!-- 百度地图配置 -->
+                        <script type="text/javascript">
+                            //创建和初始化地图函数：
+                            function initMap(){
+                                createMap();//创建地图
+                                setMapEvent();//设置地图事件
+                                addMapControl();//向地图添加控件
+                                addMarker();//向地图中添加marker
+                            }
+
+                            //创建地图函数：
+                            function createMap(){
+                                var map = new BMap.Map("contact_factory_address_map");//在百度地图容器中创建一个地图
+                                var point = new BMap.Point(113.414414,22.610515);//定义一个中心点坐标
+                                map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+                                window.map = map;//将map变量存储在全局
+                            }
+
+                            //地图事件设置函数：
+                            function setMapEvent(){
+                                map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                                map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                                map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                                map.enableKeyboard();//启用键盘上下左右键移动地图
+                            }
+
+                            //地图控件添加函数：
+                            function addMapControl(){
+                                //向地图中添加缩放控件
+                        	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                        	map.addControl(ctrl_nav);
+                                        //向地图中添加比例尺控件
+                        	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                        	map.addControl(ctrl_sca);
+                            }
+
+                            //标注点数组
+                            var markerArr = [{title:"中山市凡度家居科技有限公司",content:"我的备注",point:"113.414396|22.610532",isOpen:0,icon:{w:24,h:34,l:0,t:0,x:9,lb:12}}
+                        		 ];
+                            //创建marker
+                            function addMarker(){
+                                for(var i=0;i<markerArr.length;i++){
+                                    var json = markerArr[i];
+                                    var p0 = json.point.split("|")[0];
+                                    var p1 = json.point.split("|")[1];
+                                    var point = new BMap.Point(p0,p1);
+                        			var iconImg = createIcon(json.icon);
+                                    var marker = new BMap.Marker(point,{icon:iconImg});
+                        			var iw = createInfoWindow(i);
+                        			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        			marker.setLabel(label);
+                                    map.addOverlay(marker);
+                                    label.setStyle({
+                                                borderColor:"#808080",
+                                                color:"#333",
+                                                cursor:"pointer"
+                                    });
+
+                        			(function(){
+                        				var index = i;
+                        				var _iw = createInfoWindow(i);
+                        				var _marker = marker;
+                        				_marker.addEventListener("click",function(){
+                        				    this.openInfoWindow(_iw);
+                        			    });
+                        			    _iw.addEventListener("open",function(){
+                        				    _marker.getLabel().hide();
+                        			    })
+                        			    _iw.addEventListener("close",function(){
+                        				    _marker.getLabel().show();
+                        			    })
+                        				label.addEventListener("click",function(){
+                        				    _marker.openInfoWindow(_iw);
+                        			    })
+                        				if(!!json.isOpen){
+                        					label.hide();
+                        					_marker.openInfoWindow(_iw);
+                        				}
+                        			})()
+                                }
+                            }
+                            //创建InfoWindow
+                            function createInfoWindow(i){
+                                var json = markerArr[i];
+                                var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+                                return iw;
+                            }
+                            //创建一个Icon
+                            function createIcon(json){
+                                var icon = new BMap.Icon("images/ui/location.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+                                return icon;
+                            }
+
+                            initMap();//创建和初始化地图
+                        </script>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

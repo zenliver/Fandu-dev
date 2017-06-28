@@ -152,3 +152,19 @@ function newsThumbDisplayAutoHeight(imgSelector,imgDesignRatio) {
         });
     }
 }
+
+// 限制图片显示的高度，防止上传的图片高度过大影响美观
+
+function setImgParentHeight(imgSelector,imgDesignRatio) {
+    $(window).load(function () {
+        $(imgSelector).each(function () {
+            var imgWidth=$(this).width();
+            console.log(imgWidth);
+            $(this).parent().css({
+                "display": "block",
+                "overflow": "hidden",
+                "height": imgWidth*imgDesignRatio+"px"
+            });
+        });
+    });
+}

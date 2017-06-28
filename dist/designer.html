@@ -13,8 +13,8 @@
     <!-- <link rel="stylesheet" href="js/libs/videojs/video-js.min.css"> -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/page.css">
 
-    <link rel="stylesheet" href="css/designer.css">
 
     <title>设计师 - 中山市凡度家居科技有限公司</title>
 
@@ -64,7 +64,7 @@
 
     <div class="container">
         <div id="designer_body">
-            <div class="designer_cover"></div>
+            <div class="designer_cover" style="background-image: url(images/ui/designer_cover.jpg);"></div>
             <div class="designer_theory">
                 <div class="mod_title">我们的设计理念</div>
                 <div class="designer_theory_content">
@@ -190,19 +190,6 @@
     <script src="js/libs/elevator.min.js" charset="utf-8"></script>
     <script src="js/libs/jquery.actual.min.js" charset="utf-8"></script>
     <script src="js/common.js" charset="utf-8"></script>
-
-    <script type="text/javascript">
-        // 返回顶部
-        window.onload = function() {
-            var elevator = new Elevator({
-                element: document.querySelector(".footer_backtotop img"),
-                duration: 1500, // milliseconds
-                endCallback: function () {
-                    // $("body").animateCss("bounce");
-                }
-            });
-        };
-    </script>
 
 
 </body>

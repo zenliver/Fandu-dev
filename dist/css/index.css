@@ -42,7 +42,7 @@
 .index_news_head_cn {
   text-align: center;
   font-size: 18px;
-  color: #e83e0b;
+  color: #ef4623;
   margin-bottom: 5px;
 }
 .index_products_title_en,
@@ -55,8 +55,12 @@
 }
 .index_products_slides {
   position: relative;
-  padding-left: 50px;
-  padding-right: 50px;
+}
+@media (max-width: 1199px) {
+  .index_products_slides {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 .index_products_slides .swiper-container {
   position: initial;
@@ -132,9 +136,21 @@
 }
 .swiper-button-prev {
   background-image: url(../images/ui/products_slide_arrow_left.jpg);
+  left: -37px;
+}
+@media (max-width: 1199px) {
+  .swiper-button-prev {
+    left: 10px;
+  }
 }
 .swiper-button-next {
   background-image: url(../images/ui/products_slide_arrow_right.jpg);
+  right: -37px;
+}
+@media (max-width: 1199px) {
+  .swiper-button-next {
+    right: 10px;
+  }
 }
 .index_news_head {
   padding-top: 60px;
@@ -159,7 +175,7 @@
   text-align: center;
 }
 .index_news_title {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   padding-bottom: 15px;
 }

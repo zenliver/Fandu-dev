@@ -7,6 +7,17 @@ $(function () {
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
 
+    // 返回顶部
+    $(window).load(function () {
+        var elevator = new Elevator({
+            element: document.querySelector(".footer_backtotop img"),
+            duration: 600, // milliseconds
+            endCallback: function () {
+                // $("body").animateCss("bounce");
+            }
+        });
+    });
+
     // 设计师页面：设计师介绍modal
     $(".designer_profile").click(function () {
         $(this).siblings(".designer_profile_modal").children(".modal").modal();
@@ -80,10 +91,11 @@ $(function () {
 
         });
     }
+
     imgScale(".case_item .case_img img");
     imgScale(".index_news_body .thumbnail>a>img");
     imgScale(".brand_story_body .col-md-6 img");
-    imgScale(".products_item>a>img");
+    // imgScale(".products_item>a>img");
     imgScale("#honor .col-xs-6>a>img");
 
     // 手动添加动画效果
@@ -114,6 +126,128 @@ $(function () {
             $("body").removeClass("padding_top");
         }
     });
+
+    // swiper
+
+        // bannerSwiper
+        var bannerSwiper = new Swiper ('#index_slides .swiper-container', {
+            // direction: 'vertical',
+            loop: true,
+
+            // pagination
+            pagination: '#index_slides .swiper-pagination',
+            paginationClickable: true,
+            // slidesPerView: 4,
+            // spaceBetween: 100,
+
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false,
+            speed: 800
+
+            // scrollbar
+            // scrollbar: '.swiper-scrollbar',
+        })
+
+
+        // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").css("opacity","0");
+        // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").css("opacity","0");
+
+        // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeIn");
+        // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").attr("style","");
+        // setTimeout(function () {
+            // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeIn");
+            // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").attr("style","");
+
+        // },400);
+
+        // setTimeout(function () {
+            // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeOut");
+            // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+            // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+        // },5000);
+        // setTimeout(function () {
+            // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeOut");
+            // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+            // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+        // },5400);
+
+        // bannerSwiper.on("slideChangeStart",function () {
+        //     var activeIndex = bannerSwiper.activeIndex;
+        //     console.log(activeIndex);
+            // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").removeClass("fadeIn");
+            // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeIn");
+            // setTimeout(function () {
+                // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").removeClass("fadeIn");
+                // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeIn");
+
+            // },400);
+            // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeIn");
+            // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeIn");
+
+        // });
+
+        // bannerSwiper.on("slideChangeEnd",function () {
+        //     var activeIndex = bannerSwiper.activeIndex;
+        //     console.log(activeIndex);
+        //     setTimeout(function () {
+                // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").removeClass("fadeOut");
+                // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+            // },5000);
+            // setTimeout(function () {
+                // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").removeClass("fadeOut");
+                // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide").eq(activeIndex).find(".swiper-slide-bigtext").addAnimation("fadeOut");
+                // $("#index_slides .swiper-slide-bigtext").addAnimation("fadeOut");
+        //     },5400);
+        // });
+
+
+        // productsSwiper
+        var productsSwiper = new Swiper ('#index_products .swiper-container', {
+            // direction: 'vertical',
+            loop: true,
+
+            // pagination
+            // pagination: '#index_products .swiper-pagination',
+            // paginationClickable: true,
+            slidesPerView: 4,
+            // spaceBetween: 50,
+            breakpoints: {
+                991: {
+                    slidesPerView: 3,
+                    // spaceBetween: 40
+                },
+                767: {
+                    slidesPerView: 2,
+                    // spaceBetween: 30
+                },
+                480: {
+                    slidesPerView: 1,
+                    // spaceBetween: 20
+                },
+                320: {
+                    slidesPerView: 1,
+                    // spaceBetween: 10
+                }
+            },
+
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false,
+            speed: 800
+
+            // scrollbar
+            // scrollbar: '.swiper-scrollbar',
+        })
 
     // sr动画
 

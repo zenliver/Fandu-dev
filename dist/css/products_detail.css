@@ -1,30 +1,6 @@
 #products_detail_breadcrumbs {
   background-color: #f8f8f8;
 }
-#products_detail_breadcrumbs .products_detail_breadcrumbs {
-  font-size: 12px;
-  line-height: 2em;
-  padding: 15px;
-}
-@media (max-width: 767px) {
-  #products_detail_breadcrumbs .products_detail_breadcrumbs {
-    padding: 15px 0;
-  }
-}
-#products_detail_breadcrumbs .products_detail_breadcrumbs a {
-  color: #888888;
-  text-decoration: none;
-}
-#products_detail_breadcrumbs .products_detail_breadcrumbs .breadcrumb_tip {
-  color: #333333;
-}
-#products_detail_breadcrumbs .products_detail_breadcrumbs .breadcrumb_gt {
-  color: #888888;
-  padding: 0 10px;
-}
-#products_detail_breadcrumbs .products_detail_breadcrumbs .active {
-  color: #d71c1c;
-}
 #products_detail_breadcrumbs .breadcrumb > li {
   color: #333333;
   font-size: 12px;

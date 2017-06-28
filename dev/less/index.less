@@ -45,7 +45,8 @@
 .index_products_title_cn, .index_case_head_cn, .index_news_head_cn {
     text-align: center;
     font-size: 18px;
-    color: #e83e0b;
+    // color: #e83e0b;
+    color: #ef4623;
     margin-bottom: 5px;
 }
 .index_products_title_en, .index_case_head_en, .index_news_head_en {
@@ -56,8 +57,10 @@
 }
 .index_products_slides {
     position: relative;
-    padding-left: 50px;
-    padding-right: 50px;
+    @media (max-width: 1199px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
     .swiper-container {
         position: initial;
     }
@@ -130,9 +133,17 @@
 }
 .swiper-button-prev {
     background-image: url(../images/ui/products_slide_arrow_left.jpg);
+    left: -37px;
+    @media (max-width: 1199px) {
+        left: 10px;
+    }
 }
 .swiper-button-next {
     background-image: url(../images/ui/products_slide_arrow_right.jpg);
+    right: -37px;
+    @media (max-width: 1199px) {
+        right: 10px;
+    }
 }
 
 // index_case
@@ -162,7 +173,7 @@
     text-align: center;
 }
 .index_news_title {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     padding-bottom: 15px;
     a {

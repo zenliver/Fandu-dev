@@ -48,16 +48,3 @@
     <script src="js/libs/elevator.min.js" charset="utf-8"></script>
     <script src="js/libs/jquery.actual.min.js" charset="utf-8"></script>
     <script src="js/common.js" charset="utf-8"></script>
-
-    <script type="text/javascript">
-        // 返回顶部
-        window.onload = function() {
-            var elevator = new Elevator({
-                element: document.querySelector(".footer_backtotop img"),
-                duration: 1500, // milliseconds
-                endCallback: function () {
-                    // $("body").animateCss("bounce");
-                }
-            });
-        };
-    </script>
