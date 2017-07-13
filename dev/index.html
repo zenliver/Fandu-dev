@@ -18,16 +18,42 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <div class="swiper-slide-wrapper" style="background-image: url(images/ui/banner_test1.jpg);">
-                        <!-- <div class="swiper-slide-bigtext">凡度●办公新选择</div> -->
-                        <!-- <div class="swiper-slide-smtxt">选择凡度 选择改变</div> -->
+                    <div class="swiper-slide-wrapper">
+                        <div class="container">
+                            <div class="swiper_slide_video">
+
+                                <video id="swiper_video_container" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="100%" height="600" poster="images/ui/vandu_video1_poster.png" data-setup="{}">
+                                    <source src="media/vandu1.mp4" type="video/mp4">
+                                    <source src="media/vandu1.mp4" type="video/webm">
+                                    <source src="media/vandu1.mp4" type="video/ogg">
+                                    <!-- <track kind="captions" src="../shared/example-captions.vtt" srclang="en" label="English"></track> -->
+                                    <!-- Tracks need an ending tag thanks to IE9 -->
+                                    <!-- <track kind="subtitles" src="../shared/example-captions.vtt" srclang="en" label="English"></track> -->
+                                    <!-- Tracks need an ending tag thanks to IE9 -->
+                                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                                </video>
+                                <div class="swiper_video_container_mask"></div>
+
+                                <!-- <iframe id="swiper_slide_video" height="600" width="100%" src='http://player.youku.com/embed/XMjg2NDQzNTA2OA==' frameborder=0 'allowfullscreen'></iframe> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="swiper-slide-wrapper" style="background-image: url(images/ui/banner_test2.jpg);">
-                        <!-- <div class="swiper-slide-bigtext">凡度●办公新选择</div> -->
-                        <!-- <div class="swiper-slide-smtxt">选择凡度 选择改变</div> -->
-                    </div>
+                    <a href="#">
+                        <div class="swiper-slide-wrapper" style="background-image: url(images/ui/banner_test1.jpg);">
+                            <!-- <div class="swiper-slide-bigtext">凡度●办公新选择</div> -->
+                            <!-- <div class="swiper-slide-smtxt">选择凡度 选择改变</div> -->
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <div class="swiper-slide-wrapper" style="background-image: url(images/ui/banner_test2.jpg);">
+                            <!-- <div class="swiper-slide-bigtext">凡度●办公新选择</div> -->
+                            <!-- <div class="swiper-slide-smtxt">选择凡度 选择改变</div> -->
+                        </div>
+                    </a>
                 </div>
             </div>
             <!-- pagination -->

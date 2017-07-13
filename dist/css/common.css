@@ -1096,24 +1096,20 @@ ul {
   background-size: cover;
   background-position: center;
   height: 600px;
-  padding-top: 248px;
 }
 @media (max-width: 767px) {
   #index_slides .swiper-slide-wrapper {
     height: 200px;
-    padding-top: 71px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #index_slides .swiper-slide-wrapper {
     height: 400px;
-    padding-top: 160px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   #index_slides .swiper-slide-wrapper {
     height: 500px;
-    padding-top: 198px;
   }
 }
 #index_slides .swiper-slide-wrapper .swiper-slide-bigtext {

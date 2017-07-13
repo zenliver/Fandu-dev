@@ -509,6 +509,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.contact_factory_address_txt .mod_title {
+    text-align: left;
+}
 .designer_theory {
     @media (min-width: 1200px) {
         padding-left: 150px;
@@ -652,39 +655,98 @@
 
 // 首页
 
-// index_video
+// swiper中的视频播放器
 @media (min-width: 1200px) {
-    #index_video_container {
-        width: 1082px;
-        height: 652px;
-
-        pointer-events: none;
+    #swiper_video_container {
+        width: 600px/0.5625;
+        height: 600px;
+        margin: 0 auto;
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    #index_video_container {
+    #swiper_video_container {
         width: 940px;
         height: 940px*0.5625;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    #index_video_container {
+    #swiper_video_container {
         width: 720px;
         height: 720px*0.5625;
     }
 }
 @media (max-width: 767px) {
-    #index_video_container {
-        width: 290px;
-        height: 290px*0.5625;
+    #swiper_video_container {
+        width: 100%;
+        height: 200px;
+    }
+}
+#index_slides {
+    .swiper-slide-wrapper {
+        .container {
+            @media (max-width: 767px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 }
 .video-js .vjs-big-play-button {
     width: 1.5em;
     border-radius: 50%;
     margin-left: -.75em;
-
-    display: none;
+}
+.swiper_video_mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 12;
+}
+body > .swiper_slide_video {
+    position: fixed;
+    z-index: 12;
+    // opacity: 1;
+    top: 50%;
+    margin-top: -300px;
+    left: 50%;
+    margin-left: -533px;
+    @media (min-width: 992px) and (max-width: 1199px) {
+        margin-left: -940px/2;
+        margin-top: -940px*0.5625/2;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-left: -720px/2;
+        margin-top: -720px*0.5625/2;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-left: -50%;
+        margin-top: -200px/2;
+    }
+}
+.vjs-poster {
+    background-size: cover;
+}
+.vjs-paused .vjs-big-play-button {
+    display: block;
+}
+// 手机下避免click事件无效的变通方法
+@media (max-width: 767px) {
+    .swiper_slide_video {
+        position: relative;
+        .swiper_video_container_mask {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            // background-color: rgba(255,0,0,0.5);
+            background-color: transparent;
+        }
+    }
 }
 
 // index_products
@@ -718,15 +780,15 @@
     .swiper-container {
         position: initial;
     }
-}
-.swiper-slide {
-    border-right: 1px solid #c3c3c3;
-}
-.swiper-slide.swiper-slide-duplicate-prev {
-    border-right: none;
-}
-.swiper-slide.swiper-slide-prev, .swiper-slide.swiper-slide-duplicate.swiper-slide-prev {
-    border-right: none;
+    .swiper-slide {
+        border-right: 1px solid #c3c3c3;
+    }
+    .swiper-slide.swiper-slide-duplicate-prev {
+        border-right: none;
+    }
+    .swiper-slide.swiper-slide-prev, .swiper-slide.swiper-slide-duplicate.swiper-slide-prev {
+        border-right: none;
+    }
 }
 @media (max-width: 767px) {
     .swiper-slide.swiper-slide-active {
@@ -838,6 +900,8 @@
     font-size: 12px;
     color: #666666;
     line-height: 1.8em;
+    max-height: 87px;
+    overflow: hidden;
 }
 
 // 加盟页面

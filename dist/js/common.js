@@ -3,6 +3,12 @@
 
 $(function () {
 
+    // FastClick
+    // FastClick.attach(document.body);
+    // window.addEventListener('load', function() {
+    //   FastClick.attach(document.body);
+    // }, false);
+
     // 全局变量
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
@@ -127,32 +133,181 @@ $(function () {
         }
     });
 
+    // 产品分类active效果
+    var pageUrl = window.location.href;
+    var hostname = window.location.host;
+    console.log(hostname);
+    // var pagePathName = window.location.pathname;
+    var pagePathName = pageUrl.slice(hostname.length+7);
+    console.log(pagePathName);
+
+    if (pageUrl.indexOf("/products/") >= 0) {
+        var productsCateLinks = $("#products_subnav .row .col-md-2 a");
+        var productsCateUrls = new Array();
+        for (var i = 0; i < productsCateLinks.length; i++) {
+            productsCateUrls[i]=productsCateLinks.eq(i).attr("href");
+            console.log(productsCateUrls);
+        }
+        for (var n = 0; n < productsCateLinks.length; n++) {
+            if (productsCateUrls[n].indexOf(pagePathName)>=0) {
+                // productsCateUrls[n].slice(0,-5)
+                if (pagePathName != "/products/") {
+                    $(".products_subnav_item").removeClass("active");
+                    $("#products_subnav .row .col-md-2 a").eq(n).children(".products_subnav_item").addClass("active");
+                    break;
+                }
+                else {
+                    $(".products_subnav_item").removeClass("active");
+                }
+            }
+            else {
+                $(".products_subnav_item").removeClass("active");
+            }
+        }
+    }
+
     // swiper
 
         // bannerSwiper
-        var bannerSwiper = new Swiper ('#index_slides .swiper-container', {
-            // direction: 'vertical',
-            loop: true,
+        var bannerSwiper;
+        if (screenWidth >= 1200) {
+            bannerSwiper = new Swiper('#index_slides .swiper-container', {
+                // direction: 'vertical',
+                loop: true,
 
-            // pagination
-            pagination: '#index_slides .swiper-pagination',
-            paginationClickable: true,
-            // slidesPerView: 4,
-            // spaceBetween: 100,
+                // pagination
+                pagination: '#index_slides .swiper-pagination',
+                paginationClickable: true,
+                // slidesPerView: 4,
+                // spaceBetween: 100,
 
-            // Navigation arrows
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
 
-            autoplay: 3000,
-            autoplayDisableOnInteraction: false,
-            speed: 800
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false,
+                speed: 800
 
-            // scrollbar
-            // scrollbar: '.swiper-scrollbar',
-        })
+                // scrollbar
+                // scrollbar: '.swiper-scrollbar',
+            });
+        }
+        else {
+            bannerSwiper = new Swiper('#index_slides .swiper-container', {
+                // direction: 'vertical',
+                loop: true,
+
+                // pagination
+                pagination: '#index_slides .swiper-pagination',
+                paginationClickable: true,
+                // slidesPerView: 4,
+                // spaceBetween: 100,
+
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false,
+                speed: 800
+
+                // scrollbar
+                // scrollbar: '.swiper-scrollbar',
+            });
+        }
 
 
+
+        // swiper视频播放效果
+        var swiperVideoPlayer = videojs("swiper_video_container");
+
+
+
+        if (screenWidth >= 1200) { // PC下
+
+
+            $("body").on("click","#index_slides #swiper_video_container",function () {
+                // event.preventDefault();
+                // event.preventDefault();
+                    // event.stopPropagation();
+                    // return false;
+                // $("#swiper_video_container_html5_api").stop();
+                // alert("fastclick!");
+
+                if (bannerSwiper.classNames.length > 0) { // 只有当前页面上存在该swiper时才执行下面的代码，防止报错。只有当前页面上存在该swiper时swiper的classNames属性才不为空，否则swiper的classNames属性是一个空的数组。
+                    bannerSwiper.stopAutoplay();
+
+                }
+
+                $("body").append('<div class="swiper_video_mask">');
+                $("body").append($(".swiper-slide-active .swiper_slide_video"));
+                $("body > .swiper_slide_video").css("margin-top",(-indexVideoHeight/2)+"px");
+                $("body > .swiper_slide_video .vjs-big-play-button").trigger("click");
+            });
+            // console.log(swiperVideoPlayer);
+            // swiperVideoPlayer.on("pause",function () {
+            //     // alert("播放暂停！");
+            // });
+            $("body").on("click",".swiper_video_mask",function () {
+                $(this).remove();
+                $("body > .swiper_slide_video").appendTo($(".swiper-slide-active .container"));
+                if (bannerSwiper.classNames.length > 0) { // 只有当前页面上存在该swiper时才执行下面的代码，防止报错。只有当前页面上存在该swiper时swiper的classNames属性才不为空，否则swiper的classNames属性是一个空的数组。
+                    bannerSwiper.startAutoplay();
+
+                }
+            });
+
+
+        } else { // 移动设备下
+
+
+            $("body").on("click","#index_slides .swiper_video_container_mask",function () { // 移动设备下避免click事件无效的变通方法：直接点击视频在移动设备上会直接触发视频的播放，给视频绑定的click事件不会执行，改为在视频上方通过绝对定位显示一个透明的遮罩层，给遮罩层绑定click事件就可以有效解决这个问题。给遮罩层绑定click事件，点击是点在遮罩层上，避免了直接点在视频上带来的问题。
+
+                // event.preventDefault();
+                // event.preventDefault();
+                    // event.stopPropagation();
+                    // return false;
+                // $("#swiper_video_container_html5_api").stop();
+                // alert("fastclick!");
+
+                if (bannerSwiper.classNames.length > 0) { // 只有当前页面上存在该swiper时才执行下面的代码，防止报错。只有当前页面上存在该swiper时swiper的classNames属性才不为空，否则swiper的classNames属性是一个空的数组。
+                    bannerSwiper.stopAutoplay();
+
+                }
+
+                $(this).hide();
+                $("body").append('<div class="swiper_video_mask">');
+                $("body").append($(".swiper-slide-active .swiper_slide_video"));
+                $("body > .swiper_slide_video").css("margin-top",(-indexVideoHeight/2)+"px");
+                $("body > .swiper_slide_video .vjs-big-play-button").trigger("click");
+                swiperVideoPlayer.play();
+
+            });
+            // console.log(swiperVideoPlayer);
+            // swiperVideoPlayer.on("pause",function () {
+            //     // alert("播放暂停！");
+            // });
+            $("body").on("click",".swiper_video_mask",function () {
+                $(this).remove();
+                swiperVideoPlayer.pause();
+                $("body > .swiper_slide_video").attr("style","");
+                $("body > .swiper_slide_video .swiper_video_container_mask").show();
+                $("body > .swiper_slide_video").appendTo($(".swiper-slide-active .container"));
+                if (bannerSwiper.classNames.length > 0) { // 只有当前页面上存在该swiper时才执行下面的代码，防止报错。只有当前页面上存在该swiper时swiper的classNames属性才不为空，否则swiper的classNames属性是一个空的数组。
+                    bannerSwiper.startAutoplay();
+
+                }
+            });
+
+
+        }
+
+
+        if (screenWidth < 768) {
+            var indexVideoHeight = screenWidth*0.5625;
+            $("#swiper_video_container, #index_slides .swiper-slide-wrapper").css("height",indexVideoHeight+"px");
+        }
         // $("#index_slides .swiper-slide-active .swiper-slide-bigtext").css("opacity","0");
         // $("#index_slides .swiper-slide-active .swiper-slide-smtxt").css("opacity","0");
 
