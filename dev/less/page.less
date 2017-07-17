@@ -305,12 +305,15 @@
     background-image: url(../images/ui/company_cover.jpg);
     background-size: cover;
     background-position: center;
-    height: 305px;
+    height: 409px;
     @media (max-width: 767px) {
         height: 150px;
     }
     @media (min-width: 768px) and (max-width: 991px) {
         height: 250px;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        height: 350px;
     }
 }
 
@@ -682,6 +685,11 @@
     }
 }
 #index_slides {
+    .swiper-slide[data-swiper-slide-index="0"] {
+        .swiper-slide-wrapper {
+            background-image: url(../images/ui/vandu_video1_poster_opa.png);
+        }
+    }
     .swiper-slide-wrapper {
         .container {
             @media (max-width: 767px) {
@@ -733,8 +741,8 @@ body > .swiper_slide_video {
 .vjs-paused .vjs-big-play-button {
     display: block;
 }
-// 手机下避免click事件无效的变通方法
-@media (max-width: 767px) {
+// 移动设备下避免click事件无效的变通方法
+@media (max-width: 1199px) {
     .swiper_slide_video {
         position: relative;
         .swiper_video_container_mask {

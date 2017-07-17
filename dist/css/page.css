@@ -320,7 +320,7 @@
   background-image: url(../images/ui/company_cover.jpg);
   background-size: cover;
   background-position: center;
-  height: 305px;
+  height: 409px;
 }
 @media (max-width: 767px) {
   #company_cover {
@@ -330,6 +330,11 @@
 @media (min-width: 768px) and (max-width: 991px) {
   #company_cover {
     height: 250px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #company_cover {
+    height: 350px;
   }
 }
 #company_content {
@@ -734,6 +739,9 @@
     height: 200px;
   }
 }
+#index_slides .swiper-slide[data-swiper-slide-index="0"] .swiper-slide-wrapper {
+  background-image: url(../images/ui/vandu_video1_poster_opa.png);
+}
 @media (max-width: 767px) {
   #index_slides .swiper-slide-wrapper .container {
     padding-left: 0;
@@ -787,7 +795,7 @@ body > .swiper_slide_video {
 .vjs-paused .vjs-big-play-button {
   display: block;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .swiper_slide_video {
     position: relative;
   }
