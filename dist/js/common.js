@@ -133,6 +133,30 @@ $(function () {
         }
     });
 
+    // 产品列表页：分类图标区域自动居中
+    var productsCateItemColWidth = $("#products_subnav .row .col-md-2").width();
+    console.log(productsCateItemColWidth);
+    var productsCateItemColNum = $("#products_subnav .row .col-md-2").length;
+    if (screenWidth >= 768) {
+        $("#products_subnav .row .col-md-2").css("width",(100/productsCateItemColNum)+"%");
+    }
+    if (screenWidth >= 1200) {
+        $("#products_subnav .row").css({
+            "padding-left": (1083-productsCateItemColWidth*productsCateItemColNum)/2+"px",
+            "padding-right": (1083-productsCateItemColWidth*productsCateItemColNum)/2+"px"
+        });
+    } else if (screenWidth < 1200 && screenWidth >= 992) {
+        $("#products_subnav .row").css({
+            "padding-left": (940-productsCateItemColWidth*productsCateItemColNum)/2+"px",
+            "padding-right": (940-productsCateItemColWidth*productsCateItemColNum)/2+"px"
+        });
+    } else if (screenWidth < 992 && screenWidth >= 768) {
+        $("#products_subnav .row").css({
+            "padding-left": (720-productsCateItemColWidth*productsCateItemColNum)/2+"px",
+            "padding-right": (720-productsCateItemColWidth*productsCateItemColNum)/2+"px"
+        });
+    }
+
     // 产品分类active效果
     var pageUrl = window.location.href;
     var hostname = window.location.host;
