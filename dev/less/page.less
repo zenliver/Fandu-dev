@@ -926,10 +926,28 @@ body > .swiper_slide_video {
     padding-bottom: 25px;
     margin-bottom: 35px;
 }
+.jiameng_condition {
+    text-align: center;
+}
+// 20170731新增 开始
+.jiameng_model_cover {
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-top: -40px;
+    @media (max-width: 767px) {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: -20px;
+    }
+}
+// 20170731新增 结束
 .jiameng_model_title, .jiameng_condition_title, .jiameng_me_title, .jiameng_jobs_title {
     font-size: 14px;
     color: #333333;
     padding-bottom: 25px;
+}
+.jiameng_me_title, .jiameng_model_title, .jiameng_jobs_title {
+    text-align: center;
 }
 .jiameng_model_content {
     .col-md-4 {
@@ -1177,6 +1195,7 @@ body > .swiper_slide_video {
     color: #666666;
     line-height: 2em;
     padding-bottom: 30px;
+    padding-top: 30px; // 20170731新增
 }
 .jiameng_model_detail_title {
     font-size: 14px;
