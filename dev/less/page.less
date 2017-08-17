@@ -1767,6 +1767,14 @@ body > .swiper_slide_video {
     @media (min-width: 992px) and (max-width: 1199px) {
         padding: 60px 100px;
     }
+    p {
+        img {
+            display: block;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 .products_detail_title {
     font-size: 18px;
@@ -1871,3 +1879,24 @@ body > .swiper_slide_video {
         }
     }
 }
+
+
+// 20170808修改 开始↓ （在没有加展厅内容的情况下展厅列表页面说明文字居中，若以后加了展厅，只需要注释掉本次修改即可。）
+.showroom_desc .row > .col-md-6 {
+    &:nth-child(1) {
+        margin-bottom: 0;
+    }
+    @media (min-width: 768px) {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    @media (min-width: 1200px) {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+}
+.showroom_desc_title, .showroom_desc_content p {
+    text-align: center !important;
+}
+// 20170808修改 结束↑
